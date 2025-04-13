@@ -5,7 +5,7 @@
 <p align="center"><b><a href="https://play.google.com/store/apps/details?id=com.free.block.musicum&gl=in&hl=en_IN"><img src="https://github.com/user-attachments/assets/5426bc5c-1171-4ce7-85b4-504b09e56c38" alt="Get it on Play store" height=80/></a></b></p>
 <h4 align="center">If you like to watch YouTube Videos, you can download WeTube: Video, Music & Podcast that a lightweight YouTube client for Android.</h4>
 <p align="center"><a href="https://play.google.com/store/apps/details?id=free.mor.mordo.do&gl=in&hl=en_IN&q=youtube,video,music,podcast"><img src="https://github.com/user-attachments/assets/beaf643e-feb1-4736-9420-14f216d4cde7" width="96"></a></p>
-<p align="center"><a href="https://play.google.com/store/apps/details?id=free.mor.mordo.do&gl=in&hl=en_IN&q=youtube,video,music,podcast,drama"><img src="https://github.com/user-attachments/assets/5426bc5c-1171-4ce7-85b4-504b09e56c38" alt="Get it on Play store" height=80/></a></p>
+<p align="center"><b><a href="https://play.google.com/store/apps/details?id=free.mor.mordo.do&gl=in&hl=en_IN&q=youtube,video,music,podcast,drama"><img src="https://github.com/user-attachments/assets/5426bc5c-1171-4ce7-85b4-504b09e56c38" alt="Get it on Play store" height=80/></a></b></p>
 <p align="center">
 <img src="https://github.com/Purehi/Purehi/assets/138559218/dfb00bd2-069e-40f6-b87e-53fc25fdea0c" width="160" />
 <img src="https://github.com/Purehi/Purehi/assets/138559218/8fae8d97-4f06-4c42-8c5a-ab230ffc1971" width="160" />
