@@ -1,0 +1,537 @@
+import 'dart:ui';
+import 'package:you_tube_music/strings/ar.dart';
+import 'package:you_tube_music/strings/bg.dart';
+import 'package:you_tube_music/strings/ca.dart';
+import 'package:you_tube_music/strings/cn.dart';
+import 'package:you_tube_music/strings/cs.dart';
+import 'package:you_tube_music/strings/de.dart';
+import 'package:you_tube_music/strings/en.dart';
+import 'package:you_tube_music/strings/es.dart';
+import 'package:you_tube_music/strings/et.dart';
+import 'package:you_tube_music/strings/fr.dart';
+import 'package:you_tube_music/strings/gr.dart';
+import 'package:you_tube_music/strings/hr.dart';
+import 'package:you_tube_music/strings/ht.dart';
+import 'package:you_tube_music/strings/id.dart';
+import 'package:you_tube_music/strings/it.dart';
+import 'package:you_tube_music/strings/ja.dart';
+import 'package:you_tube_music/strings/ko.dart';
+import 'package:you_tube_music/strings/ku.dart';
+import 'package:you_tube_music/strings/lt.dart';
+import 'package:you_tube_music/strings/lv.dart';
+import 'package:you_tube_music/strings/nb.dart';
+import 'package:you_tube_music/strings/nl.dart';
+import 'package:you_tube_music/strings/nn.dart';
+import 'package:you_tube_music/strings/np.dart';
+import 'package:you_tube_music/strings/pl.dart';
+import 'package:you_tube_music/strings/pt.dart';
+import 'package:you_tube_music/strings/ro.dart';
+import 'package:you_tube_music/strings/ru.dart';
+import 'package:you_tube_music/strings/sk.dart';
+import 'package:you_tube_music/strings/tr.dart';
+import 'package:you_tube_music/strings/tw.dart';
+import 'package:you_tube_music/strings/uk.dart';
+import 'package:you_tube_music/strings/he.dart';
+
+// ToDo: solution to prevent manual update on adding new localizations?
+/// Returns a translation for the given [locale]. Defaults to english.
+Map<String, String> getAllCounties(Locale locale) {
+  switch (locale.languageCode) {
+    case 'zh':
+      switch (locale.scriptCode) {
+        case 'Hant':
+          return tw;
+        case 'Hans':
+        default:
+          return cn;
+      }
+    case 'el':
+      return gr;
+    case 'ar':
+      return ar;
+    case 'bg':
+      return bg;
+    case 'ku':
+      return ku;
+    case 'es':
+      return es;
+    case 'et':
+      return et;
+    case 'pt':
+      return pt;
+    case 'nb':
+      return nb;
+    case 'nn':
+      return nn;
+    case 'uk':
+      return uk;
+    case 'pl':
+      return pl;
+    case 'tr':
+      return tr;
+    case 'hr':
+      return hr;
+    case 'ht':
+      return ht;
+    case 'ro':
+      return ro;
+    case 'ru':
+      return ru;
+    case 'sk':
+      return sk;
+    case 'hi':
+    case 'ne':
+      return np;
+    case 'fr':
+      return fr;
+    case 'de':
+      return de;
+    case 'lv':
+      return lv;
+    case 'lt':
+      return lt;
+    case 'nl':
+      return nl;
+    case 'it':
+      return it;
+    case 'ja':
+      return ja;
+    case 'id':
+      return id;
+    case 'ko':
+      return ko;
+    case 'cs':
+      return cs;
+    case 'ca':
+      return ca;
+    case 'he':
+      return he;
+    case 'en':
+    default:
+      return en;
+  }
+}
+String? filterSomeCountry(String? countryCode){
+  switch (countryCode) {
+    case 'AL':
+      return 'GR';
+    case 'DZ':
+      return 'AE';
+    case 'AD':
+    case 'CU':
+    case 'DO':
+    case 'EC':
+    case 'SV':
+    case 'GT':
+    case 'HN':
+    case 'UY':
+      return 'ES';
+    case 'AO':
+    case 'AI':
+    case 'AG':
+    case 'AM':
+    case 'AW':
+    case 'AC':
+    case 'AZ':
+    case 'BS':
+    case 'JM':
+    case 'ZW':
+    case 'AS':
+    case 'AF':
+    case 'AX':
+      return 'US';
+    case 'BY':
+    case 'RU':
+      return 'UA';
+    case 'BO':
+    case 'NI':
+    case 'PA':
+    case 'PY':
+    case 'VE':
+      return 'ES';
+    case 'BW':
+      return 'GB';
+    case 'LB':
+    case 'LY':
+    case 'MA':
+    case 'SY':
+    case 'TN':
+    case 'YE':
+      return 'AE';
+    case 'JO':
+    case 'KW':
+    case 'OM':
+    case 'QA':
+    case 'BH':
+      return 'SA';
+    case 'BA':
+      return 'HR';
+    case 'BZ':
+      return 'HN';
+    case 'VG':
+    case 'KY':
+    case 'IO':
+    case 'PG':
+      return 'GB';
+    case 'BN':
+      return 'MY';
+    case 'BF':
+    case 'CF':
+    case 'TD':
+    case 'CD':
+    case 'GF':
+    case 'PF':
+    case 'LU':
+    case 'MC':
+    case 'SN':
+      return 'FR';
+    case 'BQ':
+      return 'NL';
+    case 'CN':
+    case 'HK':
+    case 'MO':
+      return 'TW';
+    default:
+      return null;
+  }
+}
+String? getLanguageCode(String? countryCode) {
+  switch (countryCode) {
+    case 'AE':
+    case 'BH':
+    case 'DZ':
+    case 'EG':
+    case 'IQ':
+    case 'JO':
+    case 'KW':
+    case 'LB':
+    case 'LY':
+    case 'MA':
+    case 'OM':
+    case 'QA':
+    case 'SA':
+    case 'SY':
+    case 'TN':
+    case 'YE':
+      return 'ar';
+    case 'AF':
+    case 'IR':
+      return 'pl';
+    case 'VN':
+      return 'vi';
+    case 'CN':
+      return 'zh-CN';
+    case 'TW':
+      return 'zh-TW';
+    case 'MO':
+    case 'HK':
+      return 'zh-HK';
+    case 'GR':
+      return 'el';
+    case 'SI':
+      return 'sl';
+    case 'LA':
+      return 'lo';
+    case 'MK':
+      return 'mk';
+    case 'TH':
+      return 'th';
+    case 'UZ':
+      return 'uz';
+    case 'ES':
+    case 'AR':
+    case 'BO':
+    case 'CL':
+    case 'CO':
+    case 'CR':
+    case 'DO':
+    case 'EC':
+    case 'GT':
+    case 'HN':
+    case 'MX':
+    case 'NI':
+    case 'PA':
+    case 'PE':
+    case 'PR':
+    case 'PY':
+    case 'SV':
+    case 'UY':
+    case 'VE':
+    case 'CU':
+      return 'es';
+    case 'AL':
+      return 'bg';
+    case 'AM':
+    case 'AZ':
+      return 'az';
+    case 'EE':
+      return 'et';
+    case 'PT':
+    case 'BR':
+      return 'pt';
+    case 'NO':
+      return 'nb';
+    case 'UA':
+      return 'uk';
+    case 'PL':
+      return 'pl';
+    case 'GE':
+      return 'ka';
+    case 'TR':
+      return 'tr';
+    case 'PK':
+      return 'ur';
+    case 'HR':
+    case 'BA':
+      return 'hr';
+    case 'HA':
+      return 'ht';
+    case 'RO':
+      return 'ro';
+    case 'BY':
+    case 'RU':
+      return 'ru';
+    case 'SK':
+      return 'sk';
+    case 'NP':
+      return 'hi';
+    case 'KZ':
+      return 'kk';
+    case 'KG':
+      return 'ky';
+    case 'FR':
+    case 'BE':
+    case 'CH':
+    case 'LU':
+    case 'MC':
+    case 'BJ':
+    case 'BF':
+    case 'CF':
+    case 'TD':
+    case 'CD':
+    case 'GF':
+    case 'PF':
+    case 'SN':
+      return 'fr';
+    case 'DE':
+    case 'AT':
+    case 'LI':
+      return 'de';
+    case 'CA':
+    case 'AC':
+    case 'AU':
+    case 'BZ':
+    case 'CB':
+    case 'GB':
+    case 'IE':
+    case 'JM':
+    case 'NZ':
+    case 'PH':
+    case 'TT':
+    case 'US':
+    case 'ZA':
+    case 'ZW':
+    case 'PG':
+      return 'en';
+    case 'LV':
+      return 'lv';
+    case 'LT':
+      return 'lt';
+    case 'FI':
+      return 'fi';
+    case 'BQ':
+    case 'NL':
+      return 'nl';
+    case 'IT':
+      return 'it';
+    case 'JP':
+      return 'ja';
+    case 'ID':
+      return 'id';
+    case 'KR':
+      return 'ko';
+    case 'CZ':
+      return 'cs';
+    case 'KE':
+      return 'sw';
+    case 'HU':
+      return 'hu';
+    case 'IS':
+      return 'is';
+    case 'IN':
+      return 'he';
+    case 'BD':
+      return 'bn';
+    case 'BG':
+      return 'bg';
+    case 'IL':
+      return 'he';
+    case 'DK':
+      return 'da';
+    case 'BN':
+    case 'MY':
+      return 'ms';
+    default:
+      return 'en';
+  }
+
+}
+bool removeSomeCountry(String? countryCode){
+  switch (countryCode) {
+  //过滤美国萨维亚
+    case 'AL'://阿富汗
+    case 'AD'://阿富汗
+    case 'IO'://阿富汗
+    case 'BN'://阿富汗
+    case 'IR'://伊朗
+    case 'BQ'://阿富汗
+    case 'KY'://阿富汗
+    case 'SY'://叙利亚
+    case 'MO'://澳门
+    case 'MC'://澳门
+    case 'GF'://法属圭亚那
+    case 'PF'://法属波利尼西亚
+    case 'CF'://中非
+    case 'TD'://中非
+    // case 'TD'://中非
+    case 'KG'://中非
+    case 'CD'://中非
+    case 'CN'://中国
+    case 'CU'://中国
+    case 'VG'://阿富汗
+    case 'AS'://阿富汗
+    case 'AF'://阿富汗
+    case 'AX'://奥兰群岛
+    case 'BT'://不丹
+    case 'AO'://安哥拉
+    case 'AI'://安圭拉
+    case 'AG'://安提瓜和巴布达
+    case 'AM'://亚美尼亚
+    case 'AW'://阿路巴
+    case 'AC'://阿森森岛
+    case 'AZ'://阿塞拜疆
+    case 'BS'://巴哈马
+    case 'BH'://巴林
+    case 'BW'://博茨瓦纳
+    case 'BA'://波希尼亚及赫塞哥维那
+    case 'BB'://巴巴多斯
+    case 'BZ'://伯利兹
+    case 'BJ'://贝宁
+    case 'BM'://百慕大
+    case 'BI'://布隆迪
+    case 'CM'://喀麦隆
+    case 'CV'://维德角岛
+    case 'CC'://科克斯群岛
+    case 'CI'://科迪瓦
+    case 'CX'://圣诞岛
+    case 'KM'://科摩罗
+    case 'BF'://布基纳法索
+    case 'CG'://刚果
+    case 'CK'://库克群岛
+    case 'CW'://库拉索
+    case 'CY'://塞浦路斯
+    case 'CZ'://捷克
+    case 'DJ'://吉布提
+    case 'DM'://多米尼克
+    case 'TL'://东帝汶
+    case 'GQ'://赤道几内亚
+    case 'ER'://厄立特里亚
+    case 'ET'://埃塞尔比亚
+    case 'FK'://法罗群岛
+    case 'FO'://法罗群岛
+    case 'FJ'://斐济
+    case 'GA'://加蓬
+    case 'GM'://冈比亚
+    case 'GH'://加纳
+    case 'GI'://直布罗陀
+    case 'GL'://格陵兰岛
+    case 'GD'://格林那达
+    case 'GP'://哥的罗布
+    case 'GU'://关岛
+    case 'GG'://根西
+    case 'GN'://几内亚
+    case 'GW'://几内亚比绍
+    case 'GY'://圭亚那
+    case 'HT'://海地
+    case 'HM'://赫德岛
+    case 'IM'://马恩岛
+    case 'JE'://泽西
+    case 'KI'://基里巴斯
+    case 'XK'://科索沃
+    case 'LS'://莱索托
+    case 'LR'://利比里亚
+    case 'LI'://列支敦士登
+    case 'MG'://马达加斯加
+    case 'MW'://马拉维
+    case 'MV'://马尔代夫
+    case 'ML'://马里
+    case 'MT'://马耳他
+    case 'MH'://马绍尔群岛
+    case 'MQ'://马提尼克岛
+    case 'MU'://毛里求斯
+    case 'MR'://毛里塔尼亚
+    case 'YT'://马约特
+    case 'FM'://密克罗尼亚
+    case 'MD'://摩尔多瓦
+    case 'MN'://蒙古
+    case 'MS'://蒙拉塞拉特
+    case 'MZ'://莫桑比克
+    case 'MM'://缅甸
+    case 'NA'://纳米比亚
+    case 'NR'://努鲁
+    case 'NC'://信科里多尼亚
+    case 'NE'://尼日尔
+    case 'NU'://纽埃
+    case 'NF'://幅克群岛
+    case 'KP'://朝鲜
+    case 'MP'://北马里亚纳群岛
+    case 'PW'://帕劳
+    case 'PS'://巴勒斯坦
+    case 'PA'://留尼汪
+    case 'SH'://圣赫勒拿岛
+    case 'RE'://留尼汪
+    case 'RW'://卢旺达
+    case 'BL'://圣巴泰勒米
+    case 'KN'://圣济慈和维尼斯
+    case 'LC'://圣卢西亚
+    case 'MF'://法属圣马丁
+    case 'PM'://圣皮埃尔和密克隆
+    case 'VC'://圣文森特
+    case 'WS'://萨摩亚
+    case 'SM'://圣马力诺
+    case 'ST'://圣多美和普林西比
+    case 'SX'://荷属圣马丁
+    case 'SC'://塞舌尔
+    case 'SL'://塞拉利昂
+    case 'SB'://所罗门群岛
+    case 'SO'://索马里
+    case 'GS'://南乔治亚
+    case 'SS'://南苏丹
+    case 'LK'://斯里兰卡
+    case 'SR'://苏里南
+    case 'SD'://苏丹
+    case 'SJ'://苏瓦尔巴
+    case 'SZ'://斯威士兰
+    case 'TK'://托克劳
+    case 'TJ'://塔吉克斯坦
+    case 'TZ'://坦桑尼亚
+    case 'TT'://特立尼达和多巴哥
+    case 'TO'://汤加
+    case 'TG'://多哥
+    case 'TM'://土库曼斯坦
+    case 'TC'://特克斯
+    case 'TV'://图瓦卢
+    case 'VI'://维京群岛
+    case 'UZ'://乌兹别克斯坦
+    case 'VU'://瓦努阿图
+    case 'VA'://梵蒂冈
+    case 'WF'://瓦里斯
+    case 'WW'://全世界
+    case 'EH'://撒哈拉共和国
+    case 'ZM'://赞比亚
+    case 'search'://查询
+      return true;
+    default:
+      return false;
+  }
+}
