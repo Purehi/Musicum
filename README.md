@@ -1,11 +1,11 @@
 <h1 align="center"><b>Musicum: HD Music Videos</b></h1>
 <h4 align="center">A lightweight music streaming front-end for Android.</h4>
 
-<p align="center"><a href="https://play.google.com/store/apps/details?id=com.free.block.musicum&gl=in&hl=en_IN"><img src="https://github.com/user-attachments/assets/5426bc5c-1171-4ce7-85b4-504b09e56c38" alt="Get it on Play store" height=80/></a>
+<p align="center"><a href="https://play.google.com/store/apps/details?id=com.free.block.musicum&gl=in&hl=en_IN"><img src="https://github.com/user-attachments/assets/5426bc5c-1171-4ce7-85b4-504b09e56c38" alt="Get it on Play store" height=80/></a></p>
 
-<img src="https://github.com/Purehi/Purehi/assets/138559218/dfb00bd2-069e-40f6-b87e-53fc25fdea0c" width="200" />
-<img src="https://github.com/Purehi/Purehi/assets/138559218/8fae8d97-4f06-4c42-8c5a-ab230ffc1971" width="200" />
-<img src="https://github.com/Purehi/Purehi/assets/138559218/b17fd3c8-66f3-4721-b42d-00ffea73d780" width="200" />
+<img src="https://github.com/Purehi/Purehi/assets/138559218/dfb00bd2-069e-40f6-b87e-53fc25fdea0c" width="160" />
+<img src="https://github.com/Purehi/Purehi/assets/138559218/8fae8d97-4f06-4c42-8c5a-ab230ffc1971" width="160" />
+<img src="https://github.com/Purehi/Purehi/assets/138559218/b17fd3c8-66f3-4721-b42d-00ffea73d780" width="160" />
 
 
 Dive into music with Musicum, your ultimate streaming companion! Enjoy ad-free YouTube Music playback, streaming songs, playlists, and albums without interruptions. Search YouTube Music effortlessly to find your favorite tracks in seconds. With smooth background playback, keep the vibes going while multitasking or locking your screen. Musicum’s sleek, intuitive design ensures easy navigation for all music lovers. Download now and transform your listening experience!
