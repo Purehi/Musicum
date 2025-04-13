@@ -1,8 +1,8 @@
 <p align="center"><a href="https://play.google.com/store/apps/details?id=com.free.block.musicum&gl=us&hl=en_US&q=youtube,video,music,podcast"><img src="https://github.com/user-attachments/assets/e3ccbdb5-2707-466e-8d0c-00c051af0924" width="96"></a></p>
-<h1 align="center"><b>Musicum: HD Music Videos</b></h1>
+<h1 align="center">Musicum: HD Music Videos</h1>
 <h4 align="center">A lightweight music streaming front-end for Android.</h4>
 
-<p align="center"><a href="https://play.google.com/store/apps/details?id=com.free.block.musicum&gl=in&hl=en_IN"><img src="https://github.com/user-attachments/assets/5426bc5c-1171-4ce7-85b4-504b09e56c38" alt="Get it on Play store" height=80/></a></p>
+<p align="center"><b><a href="https://play.google.com/store/apps/details?id=com.free.block.musicum&gl=in&hl=en_IN"><img src="https://github.com/user-attachments/assets/5426bc5c-1171-4ce7-85b4-504b09e56c38" alt="Get it on Play store" height=80/></a></b></p>
 <h4 align="center">If you like to watch YouTube Videos, you can download WeTube: Video, Music & Podcast that a lightweight YouTube client for Android.</h4>
 <p align="center"><a href="https://play.google.com/store/apps/details?id=free.mor.mordo.do&gl=in&hl=en_IN&q=youtube,video,music,podcast"><img src="https://github.com/user-attachments/assets/beaf643e-feb1-4736-9420-14f216d4cde7" width="96"></a></p>
 <p align="center"><a href="https://play.google.com/store/apps/details?id=free.mor.mordo.do&gl=in&hl=en_IN&q=youtube,video,music,podcast,drama"><img src="https://github.com/user-attachments/assets/5426bc5c-1171-4ce7-85b4-504b09e56c38" alt="Get it on Play store" height=80/></a></p>
