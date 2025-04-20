@@ -43,7 +43,7 @@ class ArtistsCircularCard extends StatelessWidget {
                   color: defaultColorScheme.primary,
                 ),
               ),
-              if(musicVideo.subtitle != null)Text(musicVideo.subtitle,
+              if(musicVideo.subtitle != null)Text(musicVideo.subtitle!,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: textTheme.bodyMedium?.copyWith(
