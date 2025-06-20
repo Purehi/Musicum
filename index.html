@@ -1,0 +1,160 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - SimpMusic</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans leading-relaxed">
+  <div class="max-w-3xl mx-auto p-6 md:p-10">
+    <h1 class="text-4xl font-bold text-center mb-6">Privacy Policy</h1>
+    <p class="text-lg text-center mb-8">Last Updated: June 20, 2025</p>
+
+    <section class="mb-8">
+      <p class="mb-4">
+        This page informs visitors about our policies regarding the collection, use, and disclosure of Personal Information for those who choose to use our Service.
+      </p>
+      <p class="mb-4">
+        <strong>SimpMusic</strong> is an application that is free of charge. By using our Service, you consent to the collection and use of your Personal Information as outlined in this policy. The information we collect is used to provide and enhance the Service. We do not share your information with anyone except as described in our Privacy Policy.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">App Access</h2>
+      <p class="mb-4">
+        When you use OneTube, we grant you a limited license to access and utilize our information and system for personal or commercial purposes. Except as permitted under the Copyright Act 1968 (Cth), you may not copy, reproduce, republish, distribute, or display any information from this app without our prior written consent. This license to access and use information on our app does not extend to using data mining robots or similar extraction.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Data Deletion and Access</h2>
+      <p class="mb-4">
+        Currently, data related to video content summaries will not be stored in the cloud but will be stored directly on your device. You have the ability to easily delete this content. Please note that this action cannot be undone.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Information Collection</h2>
+      <p class="mb-4">
+        For a smoother experience using our Service, we may ask you to provide certain personally identifiable information, such as your Android advertising ID. This information will be stored on your device and is not collected by us in any manner.
+      </p>
+      <p class="mb-4">
+        This app does use third-party services that may collect information used to identify you. Links to the privacy policies of third-party service providers used by the app:
+      </p>
+      <ul class="list-disc pl-6 mb-4">
+        <li><a href="https://policies.google.com/privacy" class="text-blue-600 hover:underline">Google Play Services</a></li>
+        <li><a href="https://www.google.com/policies/privacy/" class="text-blue-600 hover:underline">AdMob</a></li>
+        <li><a href="https://firebase.google.com/policies/analytics" class="text-blue-600 hover:underline">Firebase Analytics</a></li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">How We Utilize the Information We Collect</h2>
+      <p class="mb-4">
+        We use the personal information collected through the Services for the purposes described below. If we use your personal information in any other ways, we will inform you accordingly. You have the option to withhold your information from third parties for marketing purposes or restrict our use of your personal information to purposes that align with the original collection or subsequent consent obtained. If you choose to restrict how we use your personal information, some or all of the Services may not be accessible to you.
+      </p>
+      <ul class="list-disc pl-6 mb-4">
+        <li><strong>To provide the Services to you:</strong> We need specific information from you to deliver the requested Services, which may include your contact details and device information.</li>
+        <li><strong>To provide customer service:</strong> We process your personal information when you contact us for assistance with questions, concerns, disputes, or feedback.</li>
+        <li><strong>To enforce terms, agreements, or policies:</strong> To maintain safety and uphold our terms, agreements, or policies, we may process your personal information.</li>
+        <li><strong>To send you Service-related communications:</strong> We use your contact information to send you administrative or account-related information.</li>
+        <li><strong>To maintain legal and regulatory compliance:</strong> We process your personal information to fulfill our tax obligations and other business responsibilities.</li>
+        <li><strong>Designated Countries:</strong> Pursuant to the Data Protection Laws, we process the personal information of users located in the Designated Countries to comply with our legal obligations.</li>
+        <li><strong>To personalize your experience on the Services:</strong> We allow you to personalize your experience via social media plugins and by tracking preferences.</li>
+        <li><strong>To conduct research and development:</strong> We process information regarding how you use and interact with our Services to enhance them.</li>
+        <li><strong>To engage in marketing activities:</strong> We may process your contact information for marketing communications and targeted advertisements.</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Log Data</h2>
+      <p class="mb-4">
+        When you use our Service, if there is an error, we collect data and information (through third-party products) on your phone known as Log Data. This Log Data may include information such as your device's Internet Protocol ("IP") address, device name, operating system version, app configuration when using our Service, the time and date of your use of the Service, and other statistics.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Cookies</h2>
+      <p class="mb-4">
+        Cookies are small files containing a limited amount of data, often used as anonymous unique identifiers. This Service does not explicitly use "cookies". However, the app may incorporate third-party code and libraries that use "cookies" to gather information and enhance their services.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Security</h2>
+      <p class="mb-4">
+        We appreciate your trust in providing us with your Personal Information. We endeavor to use commercially acceptable means to protect it. However, no method of transmission over the internet or electronic storage is completely secure and reliable, and we cannot guarantee absolute security.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Links to Other Sites</h2>
+      <p class="mb-4">
+        This Service may include links to other websites. If you click on a third-party link, you will be directed to that site. Please be aware that these external sites are not operated by us.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Children's Privacy</h2>
+      <p class="mb-4">
+        These Services do not address anyone under the age of 16.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Changes to This Privacy Policy</h2>
+      <p class="mb-4">
+        We may update our Privacy Policy periodically. It is recommended that you review this page occasionally for any changes. We will notify you of any updates by posting the revised Privacy Policy on this page.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Contact Us</h2>
+      <p class="mb-4">
+        If you have any questions or suggestions regarding our Privacy Policy, please feel free to contact us at <a href="mailto:feedback.simpmusic@gmail.com" class="text-blue-600 hover:underline">feedback.simpmusic@gmail.com</a>.
+      </p>
+    </section>
+  </div>
+</body>
+</html>
