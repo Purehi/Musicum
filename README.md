@@ -15,6 +15,11 @@
 
 Dive into music with Musicum, your ultimate streaming companion! Enjoy ad-free YouTube Music playback, streaming songs, playlists, and albums without interruptions. Search YouTube Music effortlessly to find your favorite tracks in seconds. With smooth background playback, keep the vibes going while multitasking or locking your screen. Musicum’s sleek, intuitive design ensures easy navigation for all music lovers. Download now and transform your listening experience!
 
+<p align="center">
+<img src="https://github.com/user-attachments/assets/a96e3b65-d8f5-4c8b-87b9-84046a65456e" width="160" />
+<img src="https://github.com/user-attachments/assets/82e21204-7fed-4a03-88b4-ee8249148cd4" width="160" />
+<img src="https://github.com/user-attachments/assets/d251740e-4507-4a6e-936a-f2fb74dd3ff2" width="160" />
+</p>
 
 ### Features
 
